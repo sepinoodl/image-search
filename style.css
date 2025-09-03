@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ffe6f0, #e0f7fa);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Comic Neue", cursive;
+  line-height: 1.6;
+  color: #444;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  color: #ff69b4;
+  text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.5);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+#search-input {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+  color: #333;
+  background: #fff;
+}
+
+#search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#search-button img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+#search-button:hover {
+  background-color: #ff69b4;
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-result {
+  margin: 15px;
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-result:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 182, 193, 0.6);
+}
+
+.search-result img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.search-result a {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #ff69b4;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.search-result:hover a {
+  background-color: rgba(255, 182, 193, 0.1);
+}
+
+#show-more-button {
+  display: none;
+  margin: 30px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #a3d5ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#show-more-button:hover {
+  background-color: #7fbfff;
+}
+
+@media screen and (max-width: 768px) {
+  #search-input {
+    flex: 1 1 80%;
+  }
+  .search-result {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    flex-direction: column;
+  }
+  #search-input {
+    width: 85%;
+  }
+  #search-button {
+    width: 85%;
+    margin-left: 0;
+  }
+  .search-result {
+    width: 100%;
+  }
+}
