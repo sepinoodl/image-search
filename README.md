@@ -24,7 +24,7 @@ Users can search for beautiful images, view them in a clean grid layout, and loa
 
 ## 🚀 Live Demo
 
-👉 [Click here to view the live project](https://sepinood.github.io/image-search)
+👉 [Click here to view the live project](https://sepinoodl.github.io/image-search/)
 
 ---
 
